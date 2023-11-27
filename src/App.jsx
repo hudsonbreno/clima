@@ -20,7 +20,10 @@ function App() {
     coord:{
     lat:0.0,
     lon:0.0,
-  }})
+  },
+  weather:[{icon:'10d',},{}]
+
+})
 
   useEffect(() => {
     loadDataFromToDoAPI();

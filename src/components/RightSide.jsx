@@ -3,6 +3,14 @@ import styled from 'styled-components';
 export default function RightSide(props) {
     const { data } = props
     console.log(data)
+
+    function withCasaquinho(){
+        if(true)
+            return ("Não, você não quer levar um casaquinho")
+        else
+            return("Melhor levar um casaquinho")
+    }
+
     return (
         <RightContainer>
             <SelectDay>
@@ -29,7 +37,7 @@ export default function RightSide(props) {
                     <InfoCard>{(data.wind.speed)} m/s</InfoCard>
                 </CardBox>
             </Cards>
-            <Casaquinho>Não, você não quer levar um casaquinho</Casaquinho>
+            <Casaquinho>{withCasaquinho()}</Casaquinho>
             <Copyright>
                 Dados fornecidos pela <a>Open Weather API</a>
             </Copyright>

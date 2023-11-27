@@ -1,6 +1,5 @@
 import styled from 'styled-components'
 import ButtonRound from "./ButtonRound"
-import pontoLaranja from '../../../assets/orange-circle.png'
 
 export default function InfoTime(props) {
 
@@ -40,8 +39,8 @@ export default function InfoTime(props) {
     return (
         <InfoContainer>
             <Climate>
-                <img src={pontoLaranja} />
-                <h1></h1>
+                <img src={`https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`} />
+                <h1>{(data.main.temp - 273.15).toFixed(0)}</h1>
                 <h2>°C</h2>
             </Climate>
             <span>Céu aberto</span>
@@ -100,13 +99,14 @@ margin-top:1em;
 height: 6em;
 
   img{
-    width: 2.8em;
-    height: 2.8em;
-    margin-right:1.4em;
+    width: 4.5em;
+    height: 4.5em;
+    margin-right:0.7em;
   }
   h1{
     font-size: 4.2em;
-    color:#f49805;
+    color:#f8810a;
+    /* color:${props => props.colorInfo} */
   }
 `;
 
